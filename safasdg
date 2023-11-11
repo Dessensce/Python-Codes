@@ -98,26 +98,34 @@ OpenGUI.TextWrapped = true
 
 -- Scripts:
 
-local function IMBPIL_fake_script() -- TextButton.LocalScript 
+local function XIAXQAJ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	game:GetService("ReplicatedStorage"):WaitForChild("SpawnGalaxyBlock"):FireServer()
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnGalaxyBlock"):FireServer()
+	end)
+	
+	
 	
 end
-coroutine.wrap(IMBPIL_fake_script)()
-local function DVTZ_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(XIAXQAJ_fake_script)()
+local function HOWFZN_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
-	game:GetService("ReplicatedStorage"):WaitForChild("SpawnRainbowBlock"):FireServer()
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnRainbowBlock"):FireServer()
+	end)
 end
-coroutine.wrap(DVTZ_fake_script)()
-local function GOXHP_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(HOWFZN_fake_script)()
+local function SZKRFIP_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
-	game:GetService("ReplicatedStorage"):WaitForChild("SpawnDiamondBlock"):FireServer()
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnDiamondBlock"):FireServer()
+	end)
 end
-coroutine.wrap(GOXHP_fake_script)()
-local function NXLYOY_fake_script() -- OpenGUI.LocalScript 
+coroutine.wrap(SZKRFIP_fake_script)()
+local function CPLXHAT_fake_script() -- OpenGUI.LocalScript 
 	local script = Instance.new('LocalScript', OpenGUI)
 
 	open = false
@@ -134,4 +142,4 @@ local function NXLYOY_fake_script() -- OpenGUI.LocalScript
 		
 	end)
 end
-coroutine.wrap(NXLYOY_fake_script)()
+coroutine.wrap(CPLXHAT_fake_script)()
