@@ -1,0 +1,145 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local GUIFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local OpenGUI = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+GUIFrame.Name = "GUIFrame"
+GUIFrame.Parent = ScreenGui
+GUIFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GUIFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GUIFrame.BorderSizePixel = 0
+GUIFrame.Position = UDim2.new(0.408564806, 0, 0.407303363, 0)
+GUIFrame.Size = UDim2.new(0, 465, 0, 209)
+GUIFrame.Visible = false
+
+TextLabel.Parent = GUIFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 465, 0, 32)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "LBBG GUI"
+TextLabel.TextColor3 = Color3.fromRGB(7, 255, 123)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+TextButton.Parent = GUIFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 5
+TextButton.Position = UDim2.new(0.0387096778, 0, 0.61717844, 0)
+TextButton.Size = UDim2.new(0, 142, 0, 51)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "Spawn Galaxy Block"
+TextButton.TextColor3 = Color3.fromRGB(7, 255, 123)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = GUIFrame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 5
+TextButton_2.Position = UDim2.new(0.0387096778, 0, 0.241185382, 0)
+TextButton_2.Size = UDim2.new(0, 142, 0, 51)
+TextButton_2.Font = Enum.Font.FredokaOne
+TextButton_2.Text = "Spawn Rainbow Block"
+TextButton_2.TextColor3 = Color3.fromRGB(7, 255, 123)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextStrokeTransparency = 0.000
+TextButton_2.TextWrapped = true
+
+TextButton_3.Parent = GUIFrame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 5
+TextButton_3.Position = UDim2.new(0.662365615, 0, 0.241185382, 0)
+TextButton_3.Size = UDim2.new(0, 142, 0, 51)
+TextButton_3.Font = Enum.Font.FredokaOne
+TextButton_3.Text = "Spawn Diamond Block"
+TextButton_3.TextColor3 = Color3.fromRGB(7, 255, 123)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextStrokeTransparency = 0.000
+TextButton_3.TextWrapped = true
+
+OpenGUI.Name = "OpenGUI"
+OpenGUI.Parent = ScreenGui
+OpenGUI.BackgroundColor3 = Color3.fromRGB(6, 255, 143)
+OpenGUI.BackgroundTransparency = 0.700
+OpenGUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenGUI.BorderSizePixel = 0
+OpenGUI.Position = UDim2.new(0, 0, 0.468164772, 0)
+OpenGUI.Size = UDim2.new(0, 56, 0, 56)
+OpenGUI.Font = Enum.Font.FredokaOne
+OpenGUI.Text = "LBBG GUI"
+OpenGUI.TextColor3 = Color3.fromRGB(7, 255, 123)
+OpenGUI.TextScaled = true
+OpenGUI.TextSize = 14.000
+OpenGUI.TextStrokeTransparency = 0.000
+OpenGUI.TextWrapped = true
+
+-- Scripts:
+
+local function XIAXQAJ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnGalaxyBlock"):FireServer()
+	end)
+	
+	
+	
+end
+coroutine.wrap(XIAXQAJ_fake_script)()
+local function HOWFZN_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnRainbowBlock"):FireServer()
+	end)
+end
+coroutine.wrap(HOWFZN_fake_script)()
+local function SZKRFIP_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("SpawnDiamondBlock"):FireServer()
+	end)
+end
+coroutine.wrap(SZKRFIP_fake_script)()
+local function CPLXHAT_fake_script() -- OpenGUI.LocalScript 
+	local script = Instance.new('LocalScript', OpenGUI)
+
+	open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if open == false then
+			script.Parent.Parent.GUIFrame.Visible = true
+			open = true
+		elseif open == true then
+			script.Parent.Parent.GUIFrame.Visible = false
+			open = false
+		end
+		
+		
+	end)
+end
+coroutine.wrap(CPLXHAT_fake_script)()
